@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { tempMovieData } from "../App";
 import Movie from "./Movie";

@@ -1,5 +1,8 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { tempWatchedData } from "../App";
+import WatchedMovieList from "./WatchedMovieList";
+import WatchedSummary from "./WatchedSummary";
 
 function WatchedBox() {
   const [isOpen2, setIsOpen2] = useState(true);
@@ -15,30 +18,8 @@ function WatchedBox() {
       </button>
       {isOpen2 && (
         <>
-          <WatchedBox watched={watched} />
-
-          <ul className="list">
-            {watched.map((movie) => (
-              <li key={movie.imdbID}>
-                <img src={movie.Poster} alt={`${movie.Title} poster`} />
-                <h3>{movie.Title}</h3>
-                <div>
-                  <p>
-                    <span>⭐️</span>
-                    <span>{movie.imdbRating}</span>
-                  </p>
-                  <p>
-                    <span>🌟</span>
-                    <span>{movie.userRating}</span>
-                  </p>
-                  <p>
-                    <span>⏳</span>
-                    <span>{movie.runtime} min</span>
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <WatchedSummary watched={watched} />
+          <WatchedMovieList watched={watched} />
         </>
       )}
     </div>
