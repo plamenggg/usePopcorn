@@ -1,11 +1,10 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { tempMovieData } from "../App";
 import Movie from "./Movie";
 
-function MovieList() {
-
-    const [movies, setMovies] = useState(tempMovieData);
+function MovieList({movies}) {
 
     return (
         <ul className="list">

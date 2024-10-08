@@ -1,7 +1,8 @@
-function NumResults() {
+/* eslint-disable react/prop-types */
+function NumResults({movies}) {
   return (
     <p className="num-results">
-      Found <strong>x</strong> results
+      Found <strong>{movies.length}</strong> results
     </p>
   );
 }
